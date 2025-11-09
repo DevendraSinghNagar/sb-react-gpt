@@ -2,26 +2,62 @@ import { useRef, useState } from "react";
 import Header from "./Header";
 import validators from "../utils/validators";
 import shivbabaImage from "../assets/shivbaba.jpg";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-
-  const [isLogin, setIsLogin] = useState(null);
+  const [isLogin, setIsLogin] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handlerSubmit = () => {
-    // console.log(emailRef?.current?.value);
-    // console.log(passwordRef?.current?.value);
-
     const checkValidation = validators(
       emailRef?.current?.value,
       passwordRef?.current?.value
     );
-    console.log(checkValidation);
+    // console.log(checkValidation);
     setErrorMessage(checkValidation);
     if (checkValidation) return;
     setIsLogin(!isLogin);
+
+    // Signed up
+    if (!isLogin) {
+      createUserWithEmailAndPassword(
+        auth,
+        emailRef?.current?.value,
+        passwordRef?.current?.value
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + " - " + errorMessage);
+        });
+    }
+    // Signed in
+    if (isLogin) {
+      signInWithEmailAndPassword(
+        auth,
+        emailRef?.current?.value,
+        passwordRef?.current?.value
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + " - " + errorMessage);
+        });
+    }
   };
 
   return (

@@ -1,3 +1,4 @@
+import { getAuth } from "firebase/auth";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -7,15 +8,17 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB4LHOHPr67p-Y9ogMo7Q0lFSZHKFRUxP0",
-  authDomain: "sbgpt-53f69.firebaseapp.com",
-  projectId: "sbgpt-53f69",
-  storageBucket: "sbgpt-53f69.firebasestorage.app",
-  messagingSenderId: "430367568609",
-  appId: "1:430367568609:web:c40367ee2ba48f08e6bda0",
-  measurementId: "G-6ZFYKWHEJ5",
+  apiKey: "AIzaSyCj6dQdoBhC248DzwjKROtx9GITJtlGyzo",
+  authDomain: "sbreactapp-22ca3.firebaseapp.com",
+  projectId: "sbreactapp-22ca3",
+  storageBucket: "sbreactapp-22ca3.firebasestorage.app",
+  messagingSenderId: "160258445275",
+  appId: "1:160258445275:web:ccc154b0316e705cec21fe",
+  measurementId: "G-B5FBGXQMD8",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export const auth = getAuth();
