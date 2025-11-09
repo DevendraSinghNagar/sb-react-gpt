@@ -14,9 +14,19 @@ You may also see any lint errors in the console.
 
 ### `npm run build`
 
-### `npm run build` fails to minify
+### react-router-dom
+
+    npm i -D react-router-dom
+
+### Tailwind CSS
+
+    npm install tailwindcss @tailwindcss/postcss postcss
 
 ### Firebase
 
-Login to console, create new project > Platform > Web
-npm install firebase
+    Login to console, create new project > Platform > Web
+    npm install -g firebase-tools
+    firebase login
+    firebase init
+    npm run build
+    firebase deploy
