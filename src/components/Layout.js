@@ -17,7 +17,7 @@ const Layout = () => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
-        console.log("User is signed in", user);
+        // console.log("User is signed in", user);
         const { uuid, displayName, email, photoURL } = user;
         dispatch(
           addUser({
@@ -33,7 +33,7 @@ const Layout = () => {
         // ...
       } else {
         // User is signed out
-        console.log("User is signed out", user);
+        // console.log("User is signed out", user);
         dispatch(removeUser());
         navigate("/");
       }

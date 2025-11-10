@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 
 const MovieListContainer = () => {
   const getMovieList = useSelector((store) => store.movies?.newMovies);
-  console.log(getMovieList);
+  // console.log(getMovieList);
 
   // if (!getMovieList) return;
   return (

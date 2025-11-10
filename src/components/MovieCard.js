@@ -1,5 +1,5 @@
 const MovieCard = ({ Poster, Title }) => {
-  console.log(Poster, Title);
+  // console.log(Poster, Title);
 
   return (
     <figure className="w-28">

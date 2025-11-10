@@ -31,3 +31,5 @@ You may also see any lint errors in the console.
     npm run build
     firebase deploy
     Sign In/Sign Up/Logout - https://firebase.google.com/docs/auth/web/manage-users
+
+### Multi Language support

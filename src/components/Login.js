@@ -33,8 +33,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log("createUserWithEmailAndPassword");
-          console.log(user);
+          // console.log("createUserWithEmailAndPassword", user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -51,8 +50,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log("signInWithEmailAndPassword");
-          console.log(user);
+          // console.log("signInWithEmailAndPassword", user);
         })
         .catch((error) => {
           const errorCode = error.code;
