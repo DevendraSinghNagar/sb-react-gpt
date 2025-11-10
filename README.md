@@ -33,3 +33,8 @@ You may also see any lint errors in the console.
     Sign In/Sign Up/Logout - https://firebase.google.com/docs/auth/web/manage-users
 
 ### Multi Language support
+
+### GPT
+
+    1 Take API key from > Login > API Key > https://platform.openai.com/docs/api-reference
+    2 npm i openai
