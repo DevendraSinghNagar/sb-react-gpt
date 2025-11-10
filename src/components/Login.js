@@ -63,7 +63,7 @@ const Login = () => {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="bg-black text-white p-5 w-6/12 mx-auto"
+      className="bg-black rounded-md text-white p-5 w-6/12 mx-auto relative top-20"
     >
       <h2 className="text-5xl mb-4">{isLogin ? "Sign In" : "Sign Up"} </h2>
       {!isLogin && (
